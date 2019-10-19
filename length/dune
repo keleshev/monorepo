@@ -1,0 +1,16 @@
+(library
+ (name length)
+ (modules length)
+)
+
+(test
+ (name test_length)
+ (modules test_length)
+ (libraries length)
+)
+
+(executable
+ (name bench_length)
+ (modules bench_length)
+ (libraries length core core_bench)
+)
