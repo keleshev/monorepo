@@ -237,7 +237,7 @@ module Example_using_inline_sum = struct
       module IL = Int_or_list
 
       let compare_m t1 t2 =
-        match IL.is_immediate t1, IL.is_immediate t2 with
+        match (IL.is_immediate t1, IL.is_immediate t2) with
         | false, false ->
             compare_lengths (IL.to_reference_exn t1) (IL.to_reference_exn t2)
         | false, true ->
